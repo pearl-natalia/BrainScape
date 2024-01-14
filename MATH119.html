@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math 119</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- //FAVICON HERE -->
+    <link rel="icon" type="image/x-icon" href="faviconbs.png">
+
+    <script src="https://kit.fontawesome.com/48cc22e208.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTVfUENnZ2REYUFqRXhGdTY2d2E4TTlqR2VuZ3xBQ3Jtc0trOGVwQ3lVcU45T3ZlUUpjUkplUWdtZzktXzc1XzJCclFEWTdhNGFOdlB2RWVVZEJxc2ItckkzWFJuTVNCeHVvVGV6azF0Tkhpc05ERnpwaV8wVE1GMDhsZENWWC03Y3A1V2kxM3VfV1dNTjBNS2FTNA&q=https%3A%2F%2Funpkg.com%2Fwebcam-easy%2Fdist%2Fwebcam-easy.min.js&v=vfMENHg2B_Q">
+    </script>
+
+    <meta property="og:title" content="BrainScape" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:url" content="linkCover.png" />
+
+    <style>
+        .webcamera, .audio{
+            background-color: #CEDEBD;
+            border-radius: 50%;
+            height:100px;
+            width:100px;
+            border-color: none;
+        }
+
+        h6{
+            color: white;
+            font-family: "Raleway";
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .video-container {
+            height: 300px;
+            width: 300px;
+            position: relative;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .background-video {
+            z-index: -1;
+        }
+
+        .leaveBtn{
+            height:100px;
+            background-color: #9d957d;
+        }
+        html{
+            overflow: hidden;
+        }
+
+  
+        
+    </style>
+
+</head>
+
+<body style="background-color: #FAF1E4;">
+    <!-- header -->
+    <div class="w3-row l4" style="background-color: #28321f;height:5vh" >
+        <h3><span style="font-weight: bold;padding-left: 3vh;font-family:Raleway;font-weight: bolder;color: white;">BrainScape - MATH 119</span></h3>
+    </div>
+
+    <!-- body -->
+    <div class="w3-col l9" style="height:100vh;">
+        <div class="w3-row backdrop" style="height:80vh;background-color: green;text-align: center;position: relative;z-index: -100;">
+            <video autoplay loop class="background-video" id="videoPlayer" style="z-index:-100;left:0;top:0;position: fixed;object-fit: cover;width:75vw;height:100vh">
+                <source id="videoSource" autoplay src="" style="height:100%;width: 100%;" type="video/mp4" />
+            </video>
+            <div class="w3-col l1" style="height:80vh;">
+                <div class="w3-row" style="height:50px;color: transparent;">.</div>
+                <div class="w3-row" style="height:500px;z-index: 2;background-color: rgba(0, 0, 0, 0.485);border-radius: 10px;">
+                    <div class="w3-row" style="height:100px;padding-top: 50px;">
+                        <img class="w3-image" src="arushi.jpg" style="border-radius:50%;height:100px;width:100px">
+                    </div>
+                    <div class="w3-row" style="height:30px;padding-top:50px;padding-bottom: 50px;"><h6>Me</h6>
+                    </div>
+                    <div class="w3-row" style="height:100px;">
+                        <img class="w3-image" src="pearl.jpg" style="border-radius:50%;height:100px;width:100px">
+                    </div>
+                    <div class="w3-row" style="height:30px;padding-bottom: 50px;"><h6>Pearl</h6></div>
+                    <div class="w3-row" style="height:100px;">
+                        <img class="w3-image" src="taylor.jpg" style="border-radius:50%;height:100px;width:100px">
+                    </div>
+                    <div class="w3-row" style="height:30px;padding-bottom: 50px;"><h6>Taylor</h6></div>
+                </div>
+                <div class="w3-row" style="height:100px;color: transparent;">.</div>
+            </div>
+            
+            <div class="w3-col l2 video" style="height:15vh;padding-top: 50px;">
+                <video autoplay="false" id="videoElement" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);height: 15vh;max-width: 100%;"></video>
+            </div>
+        </div>
+    
+        <div class="w3-row" style="height: 20vh;text-align: center;z-index: 2;background-color: rgba(0, 0, 0, 0.238);">
+            <div class="w3-col l4 music-background" style="height:20vh;">
+                <div class="w3-row" style="height:40px"></div>
+                <div class="w3-col l7" style="color: transparent;">.</div>
+                <div class="w3-col l1" style="height:80px;">
+                    <button class="background" id="changeBackground" onclick="changeVideo()" style="width:200px;height:100px;border-radius: 50px;padding-left: 25px;padding-top:15px"><h6>Change Environment<br></h6></button>
+                </div>
+            </div>
+
+            <div class="w3-col l1 video" style="height:20vh;padding-top: 40px;">
+                <button class="webcamera" id="toggleCam" style="color:white" ><i class="fa fa-video fa-2x"></i></button>
+            </div>
+            <div class="w3-col l1 mic" style="height:20vh;padding-top: 40px;">
+                <button class="audio" id="toggleMic" style="color:rgb(255, 255, 255)" ><i class="fa fa-microphone fa-2x"></i></button>
+            </div>
+            <div class="w3-row" style="height:40px"></div>
+            <div class="w3-col l2" style="height:100px;background-color:#435334;padding-top: 30px;border-radius: 50px;">
+                    <a href="search.html" class="leaveBtn" id="leaveBtn" style="text-decoration: none;color:rgb(0, 0, 0);height: 100px;width:70px;text-align: center;"><h6>Leave Room</h6></a>
+            </div>
+            <div class="w3-col l2" style="height:40px"></div>
+            
+        </div>
+    </div>
+
+
+
+
+    <!-- timer, tasks, chat -->
+    <div class="w3-col l3" style="height:100vh">
+        <div class="w3-row timerDiv">
+            <p id="work" class="label">Work:</p><p id="break" class="label">Break:</p><p id="cycles" class="label">Cycles:</p>
+            <!--Work Timer-->
+            <div id="work-timer" class="timer">
+                <p id="w_minutes">25</p><p class="semicolon">:</p><p id="w_seconds">00</p>
+            </div>
+    
+            <!--Cycle Counter-->
+            <p id="counter" class="timer">0</p>
+    
+            <!--Break Timer-->
+            <div id="break-timer" class="timer">
+                <p id="b_minutes">05</p><p class="semicolon">:</p><p id="b_seconds">00</p>
+            </div>
+            <button id="start" class="btn">Start</button>
+            <button id="stop" class="btn">Pause</button>
+            <button id="reset" class="btn" style="padding-left:10px">Reset</button>
+        </div>
+        <script src="main.js"></script>
+
+
+
+        <div class="w3-row" style="height:3vh"></div>
+        <div class="w3-row tasks" style="height:30vh;text-align: center;">
+                <div class="tasksList">
+                    <h2>Tasks</h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add your task">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list-container">
+                    
+                    </ul>
+                </div>
+            <script src="script.js"></script>    
+        </div>
+
+
+        <div class="w3-row" style="height:3vh"></div>
+        
+
+        <div class="w3-row tasks" style="height:40vh;text-align: center;padding-top:60px">
+            <div id="viewport">
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script  src="./script2.js"></script>
+              </div>
+        </div>
+        <!-- <script  src="script2.js"></script> -->
+
+    </div>
+    <script>
+        //running camera
+        let video = document.querySelector("#videoElement");
+        if(navigator.mediaDevices.getUserMedia){
+            navigator.mediaDevices.getUserMedia({video:true})
+            .then(function(stream){
+                video.srcObject = stream;
+            })
+            .catch(function(error){
+                console.log("Something went wrong!");
+            })
+        }else{
+            console.log("getUserMedia not supported!");
+        }
+
+        //turning camera on and off
+        let toggleButton = document.getElementById('toggleCam');
+        let isWebcamOn = false;
+        let mediaStream = null;
+
+        toggleButton.addEventListener('click', function() {
+            if (isWebcamOn) {
+                // Turn off the webcam
+                stopWebcam();
+            } else {
+                // Turn on the webcam
+                startWebcam();
+            }
+        });
+
+        function startWebcam() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    video.srcObject = stream;
+                    mediaStream = stream;
+                    isWebcamOn = true;
+                    toggleCam.innerHTML = '<i class="fa fa-video fa-2x"></i>';
+                })
+                .catch(function (error) {
+                    console.error('Error accessing webcam:', error);
+                });
+        }
+
+        function stopWebcam() {
+            if (mediaStream) {
+                let tracks = mediaStream.getTracks();
+                tracks.forEach(track => track.stop());
+                video.srcObject = null;
+                isWebcamOn = false;
+                toggleCam.innerHTML = '<i class="fa fa-video-slash fa-2x"></i>';
+            }
+        }
+       
+
+
+        // mic on and off
+        let toggleButton2 = document.getElementById('toggleMic');
+        let isMicMuted = false;
+        let mediaStream2 = null;
+        let audioContext = new (window.AudioContext || window.webkitAudioContext)(); // Create AudioContext once
+        let audioSource = null;
+        let gainNode = audioContext.createGain(); // Create GainNode once
+
+        toggleButton2.addEventListener('click', function() {
+            if (isMicMuted) {
+                // Unmute the microphone
+                unmuteMic();
+            } else {
+                // Mute the microphone
+                muteMic();
+            }
+        });
+
+        function muteMic() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function (stream) {
+                    mediaStream2 = stream;
+                    audioSource = audioContext.createMediaStreamSource(stream);
+
+                    // Connect the audio source to the gain node
+                    audioSource.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+
+                    // Set the gain to 0 to mute
+                    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+
+                    isMicMuted = true;
+                    // Replace the icon with a muted microphone icon
+                    toggleMic.innerHTML = '<i class="fa fa-microphone-slash fa-2x"></i>';
+
+                })
+                .catch(function (error) {
+                    console.error('Error accessing microphone:', error);
+                    
+                });
+        }
+
+        function unmuteMic() {
+            if (audioSource) {
+                // Set the gain to 1 to unmute
+                gainNode.gain.setValueAtTime(1, audioContext.currentTime);
+
+                isMicMuted = false;
+                // Replace the icon with an unmuted microphone icon
+                toggleMic.innerHTML = '<i class="fa fa-microphone fa-2x"></i>';
+
+            }
+        }
+
+        //changing background video
+        var videoSources = [
+        "bg1.mp4",
+        "bg2.mp4",
+        "bg3.mp4",
+        "bg4.mp4",
+        "bg5.mp4",
+        "bg6.mp4"
+        ];
+
+        // Get video and source elements
+        var videoPlayer = document.getElementById("videoPlayer");
+        var videoSource = document.getElementById("videoSource");
+
+        // Index to keep track of the current video
+        var currentVideoIndex = 0;
+
+        // Function to change the video source
+        function changeVideo() {
+            // Increment the index, and loop back to the start if at the end
+            currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+
+            // Update the video source
+            videoSource.src = videoSources[currentVideoIndex];
+
+            // Load and play the new video
+            videoPlayer.load();
+            videoPlayer.play();
+        }
+    </script>
+
+
+
+</body>
+</html>

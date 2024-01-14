@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programs</title>
+        <link rel="stylesheet" href="search.css">
+        <link rel="icon" type="image/x-icon" href="faviconbs.png">
+
+    </head>
+    <style>
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      height: 150px;
+      width: 150px;
+      max-width: 200px;
+    }
+
+    </style>
+    <body>
+        <img src="logo.png" alt="Logo" class="logo">
+        <button onclick="myFunction()" class="dropbtn">Find your Program</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="coursesPage.html">Engineering</a>
+          <a href="#Math">Math</a>
+          <a href="#Biology">Biology</a>
+          <a href="#Business">Business</a>
+          <a href="#Arts">Arts</a>
+          <a href="#Physics">Physics</a>
+          <a href="#Chemistry">Chemistry</a>
+        </div>    
+        <script src="search.js"></script>
+    </body>
+</html>
