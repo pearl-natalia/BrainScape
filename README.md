@@ -24,7 +24,7 @@ As students, we understand the challenges of studying alone. That's why we creat
 
 ## Guide to BrainScape 
 
-<img width="820" alt="Screenshot 2024-01-14 at 10 39 54 AM" src="https://github.com/pearl-natalia/BrainScape/assets/145855287/3b661cc6-d98a-4683-8481-087fe33c54be">
+<img width="807" alt="Screenshot 2024-01-14 at 11 17 11 AM" src="https://github.com/pearl-natalia/BrainScape/assets/145855287/0c73a5b8-75f0-45da-b81c-386fd079625e">
 
 **Create an Account:** Begin by logging in with your name and choosing a password.
 **Choose Your Program:** Search for your program clusters. Our future goal is to make BrainScape catered to different universities and the programs they offer.
