@@ -6,6 +6,9 @@
 
 ## Welcome to BrainScape - Collaborative Learning Platform 🧩
 
+<img width="712" alt="Screenshot 2024-01-14 at 10 34 47 AM" src="https://github.com/pearl-natalia/BrainScape/assets/145855287/b1b09c05-f615-49f0-b421-6bd5911cc8ea">
+
+
 As students, we understand the challenges of studying alone. That's why we created **BrainScape**, a virtual space that fosters collaboration and enhances the learning experience. BrainScape is more than just a platform; it's a community where students can come together to study, share knowledge, and support each other.
 
 ## Why BrainScape? 
