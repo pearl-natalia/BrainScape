@@ -11,16 +11,12 @@
 
 As students, we understand the challenges of studying alone. That's why we created **BrainScape**, a virtual space that fosters collaboration and enhances the learning experience. BrainScape is more than just a platform; it's a community where students can come together to study, share knowledge, and support each other.
 
-## Why BrainScape? 
-
 ## Our Vision 🔎
 "We found ourselves building our schedules around when professors were holding office hours, scouring the internet for people posting questions similar to what we found in practice sets, and even resorting to posting for help on Chegg. So, we decided to create a solution to a lack of resources online by optimising every single student's capabilities."
 
   
 ## Our Mission 🚀
 "Learning by teaching and collaborating is one of the most effective ways to immerse yourself in the content, and we wanted to incorporate this into our software. Productivity and motivation have been at an all-time low for a lot of students, and BrainScape is meant to target and actively combat this issue."
-
-## Getting Started
 
 ## Guide to BrainScape 
 
@@ -30,10 +26,8 @@ As students, we understand the challenges of studying alone. That's why we creat
 **Choose Your Program:** Search for your program clusters. Our future goal is to make BrainScape catered to different universities and the programs they offer.
 **Select Your Course:** Get redirected to a selection of courses where you can join study rooms based on the subject you are studying.
 **Start Collaborating:** Interact with your peers, ask questions, and provide support. Our goal was to create study spaces where students can interact with each other at any hour of the day.
-
-## Features 
   
-## The Toolbox 🛠️
+## Features  🛠️
 
 <img width="771" alt="Screenshot 2024-01-14 at 10 43 19 AM" src="https://github.com/pearl-natalia/BrainScape/assets/145855287/56370a53-662d-4b47-a6ea-340294f6a5be">
 
